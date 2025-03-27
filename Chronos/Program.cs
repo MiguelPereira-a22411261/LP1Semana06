@@ -21,8 +21,11 @@ namespace Chronos
             TimeSpan cts1 = crono1.Elapsed;
             TimeSpan cts2 = crono2.Elapsed;
 
-            string elapsedTime1 = String.Format("{3.0000}", cts1.Seconds/1000);
-            string elapsedTime2 = String.Format("{3.0000}", cts2.Seconds/1000);
+            string elapsedTime1 = String.Format("{0:0.0000}", cts1.TotalSeconds);
+            string elapsedTime2 = String.Format("{0:0.0000}", cts2.TotalSeconds);
+
+            Console.WriteLine("Crono1: {0} seconds", elapsedTime1);
+            Console.WriteLine("Crono2: {0} seconds", elapsedTime2);
         }
     }
 }
