@@ -1,3 +1,5 @@
+using System;
+
 namespace MyGame
 {
     public class Enemy
@@ -26,6 +28,15 @@ namespace MyGame
         public float GetShield()
         {
             return shield;
+        }
+
+        public string SetName()
+        {
+            string scndname = Console.ReadLine();
+            scndname = scndname.Remove(8);
+            name = scndname;
+            return name;
+
         }
         public void TakeDamage(float damage)
         {
