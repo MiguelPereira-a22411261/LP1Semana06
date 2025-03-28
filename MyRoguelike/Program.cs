@@ -85,6 +85,15 @@ namespace MyRoguelike
             return count;
         }
 
-        
+        public void PrintEnemies()
+        {
+            for (int i = 0; i < enemies.Length; i++)
+            {
+                if (enemies[i] != null)
+                {
+                    Console.WriteLine($"{i} room: {enemies[i].GetName()}");
+                }
+            }
+        }
     }
 }
