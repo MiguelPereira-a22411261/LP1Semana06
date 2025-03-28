@@ -31,6 +31,10 @@ namespace MyGame
             return shield;
         }
 
+        public static int GetPowerUpCount()
+        {
+            return pwrupCount;
+        }
         public string SetName()
         {
             string scndname = Console.ReadLine();
