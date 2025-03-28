@@ -2,6 +2,14 @@
 
 namespace MyRoguelike
 {
+    enum Toughness
+    {
+        VeryEasy,
+        Easy,
+        Normal,
+        Hard,
+        Nightmare
+    }
     public class Program
     {
         private static void Main()
@@ -35,5 +43,9 @@ namespace MyRoguelike
             // Ninety-Ninth room: Joker
             // Hundred and Twentieth room: Commander Shepard
         }
+    }
+    public class Level
+    {
+        
     }
 }
