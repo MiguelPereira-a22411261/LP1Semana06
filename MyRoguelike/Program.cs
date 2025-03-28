@@ -78,7 +78,7 @@ namespace MyRoguelike
         public int GetNumEnemies()
         {
             int count = 0;
-            foreach (var enemy in enemies)
+            foreach (Enemy enemy in enemies)
             {
                 if (enemy != null) count++;
             }
