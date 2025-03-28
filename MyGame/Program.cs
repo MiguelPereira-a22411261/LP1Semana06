@@ -21,6 +21,7 @@ namespace MyGame
                 enemies[i].PickupPowerUp(PowerUp.Health, 20);
                 enemies[i].PickupPowerUp(PowerUp.Shield, 20);
                 Console.WriteLine($"{enemies[i].GetName()} {enemies[i].GetHealth()} {enemies[i].GetShield()}");
+                Console.WriteLine(Enemy.GetPowerUpCount());
             }
         }
     }
