@@ -7,7 +7,8 @@ namespace MyGame
         private string name;
         private float health;
         private float shield;
-
+        static int pwrupCount;
+        
         public Enemy(string name)
         {
             this.name = name;
@@ -53,6 +54,7 @@ namespace MyGame
                 if (shield > 100) shield = 100;
                 Console.WriteLine("Shield: " + shield);
             }
+            pwrupCount++;
         }
         public void TakeDamage(float damage)
         {
