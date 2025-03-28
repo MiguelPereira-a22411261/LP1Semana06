@@ -49,5 +49,14 @@ namespace MyRoguelike
         private int numRooms;
         private Toughness toughness;
         private Enemy[] enemies;
+
+        public Level(int numRooms, Toughness toughness)
+        {
+            this.numRooms = numRooms;
+            this.toughness = toughness;
+            enemies = new Enemy[numRooms];
+        }
+
+        
     }
 }
