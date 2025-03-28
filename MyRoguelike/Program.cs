@@ -2,7 +2,7 @@
 
 namespace MyRoguelike
 {
-    enum Toughness
+    public enum Toughness
     {
         VeryEasy,
         Easy,
@@ -46,6 +46,8 @@ namespace MyRoguelike
     }
     public class Level
     {
-        
+        private int numRooms;
+        private Toughness toughness;
+        private Enemy[] enemies;
     }
 }
