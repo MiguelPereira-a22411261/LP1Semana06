@@ -38,6 +38,16 @@ namespace MyGame
             return name;
 
         }
+        
+        public void PickupPowerUp(PowerUp powerUp, float powerVal)
+        {
+            if (powerUp == PowerUp.Health)
+            {
+                health += powerVal;
+                if (health > 100) health = 100;
+                Console.WriteLine("Health: " + health);
+            }
+        }
         public void TakeDamage(float damage)
         {
             shield -= damage;
