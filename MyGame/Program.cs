@@ -13,10 +13,11 @@ namespace MyGame
                 Console.Write($"Nome do inimigo {i + 1}: ");
                 string enemyName = Console.ReadLine();
                 enemies[i] = new Enemy(enemyName);
+                enemies[i].TakeDamage(10);
             }
             for (int i = 0; i < nEnemy; i++)
             {
-                Console.WriteLine($"{enemies[i].GetName()} + {enemies[i].GetHealth()} + {enemies[i].GetShield()}");
+                Console.WriteLine($"{enemies[i].GetName()} {enemies[i].GetHealth()} {enemies[i].GetShield()}");
             }
         }
     }
