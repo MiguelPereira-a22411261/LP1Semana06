@@ -47,6 +47,12 @@ namespace MyGame
                 if (health > 100) health = 100;
                 Console.WriteLine("Health: " + health);
             }
+            else if (powerUp == PowerUp.Shield)
+            {
+                shield += powerVal;
+                if (shield > 100) shield = 100;
+                Console.WriteLine("Shield: " + shield);
+            }
         }
         public void TakeDamage(float damage)
         {
