@@ -57,6 +57,10 @@ namespace MyRoguelike
             enemies = new Enemy[numRooms];
         }
 
-        
+        public int GetNumRooms()
+        {
+            return numRooms;
+        }
+
     }
 }
