@@ -67,6 +67,14 @@ namespace MyRoguelike
             return toughness;
         }
 
+        public void SetEnemyInRoom(int room, Enemy enemy)
+        {
+            if (room >= 0 && room < numRooms)
+            {
+                enemies[room] = enemy;
+            }
+        }
+
         
     }
 }
