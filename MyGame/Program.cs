@@ -18,6 +18,9 @@ namespace MyGame
             for (int i = 0; i < nEnemy; i++)
             {
                 Console.WriteLine($"{enemies[i].GetName()} {enemies[i].GetHealth()} {enemies[i].GetShield()}");
+                enemies[i].PickupPowerUp(PowerUp.Health, 20);
+                enemies[i].PickupPowerUp(PowerUp.Shield, 20);
+                Console.WriteLine($"{enemies[i].GetName()} {enemies[i].GetHealth()} {enemies[i].GetShield()}");
             }
         }
     }
