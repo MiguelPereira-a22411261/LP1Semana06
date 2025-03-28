@@ -62,5 +62,11 @@ namespace MyRoguelike
             return numRooms;
         }
 
+        public Toughness GetToughness()
+        {
+            return toughness;
+        }
+
+        
     }
 }
