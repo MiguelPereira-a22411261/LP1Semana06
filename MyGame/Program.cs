@@ -8,6 +8,12 @@ namespace MyGame
         {
             int nEnemy = int.Parse(args[0]);
             Enemy[] enemies = new Enemy[nEnemy];
+            for (int i = 0; i < nEnemy; i++)
+            {
+                Console.Write($"Enter the name of enemy {i + 1}: ");
+                string enemyName = Console.ReadLine();
+                enemies[i] = new Enemy(enemyName);
+            }
         }
     }
 }
