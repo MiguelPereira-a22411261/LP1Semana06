@@ -1,4 +1,4 @@
-namespace MyGame
+namespace MyRoguelike
 {
     public enum PowerUp
     {

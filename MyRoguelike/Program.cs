@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MyGame
+namespace MyRoguelike
 {
     public class Program
     {
