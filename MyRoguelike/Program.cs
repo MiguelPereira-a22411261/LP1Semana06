@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Globalization;
+using Humanizer;
 
 namespace MyRoguelike
 {
@@ -89,9 +91,10 @@ namespace MyRoguelike
         {
             for (int i = 0; i < enemies.Length; i++)
             {
-                if (enemies[i] != null)
+                if (enemies[i] is Enemy enemy)
                 {
-                    Console.WriteLine($"{i} room: {enemies[i].GetName()}");
+                    
+                    Console.WriteLine($"{i.ToWords(new CultureInfo("en-US")).Transform(To.TitleCase)} room: {enemy.GetName()}");
                 }
             }
         }
