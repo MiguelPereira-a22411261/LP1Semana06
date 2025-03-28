@@ -38,7 +38,6 @@ namespace MyGame
         public string SetName()
         {
             string scndname = Console.ReadLine();
-            scndname = scndname.Remove(8);
             name = scndname;
             return name;
 
