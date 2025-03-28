@@ -4,29 +4,36 @@ namespace MyRoguelike
 {
     public class Program
     {
-        private static void Main(string[] args)
+         private static void Main()
         {
-            int nEnemy = int.Parse(args[0]);
-            Enemy[] enemies = new Enemy[nEnemy];
-            for (int i = 0; i < nEnemy; i++)
-            {
-                Console.Write($"Nome do inimigo {i + 1}: ");
-                string enemyName = Console.ReadLine();
-                enemies[i] = new Enemy(enemyName);
-                enemies[i].TakeDamage(10);
-            }
-            for (int i = 0; i < nEnemy; i++)
-            {
-                if (enemies[i].GetName().Length > 8)
-                {
-                    enemies[i] = new Enemy(enemies[i].GetName().Substring(0, 8));
-                }
-                Console.WriteLine($"{enemies[i].GetName()} {enemies[i].GetHealth()} {enemies[i].GetShield()}");
-                enemies[i].PickupPowerUp(PowerUp.Health, 20);
-                enemies[i].PickupPowerUp(PowerUp.Shield, 20);
-                Console.WriteLine($"{enemies[i].GetName()} {enemies[i].GetHealth()} {enemies[i].GetShield()}");
-                Console.WriteLine(Enemy.GetPowerUpCount());
-            }
+            Level lvl = new Level(125, Toughness.Nightmare);
+
+            lvl.SetEnemyInRoom(0, new Enemy("Urdnot Wrex"));
+            lvl.SetEnemyInRoom(120, new Enemy("Commander Shepard"));
+            lvl.SetEnemyInRoom(41, new Enemy("Liara T'Soni"));
+            lvl.SetEnemyInRoom(13, new Enemy("Tali'Zorah"));
+            lvl.SetEnemyInRoom(59, new Enemy("Garrus Vakarian"));
+            lvl.SetEnemyInRoom(99, new Enemy("Joker"));
+
+            Console.WriteLine($"Toughness: {lvl.GetToughness()}");
+
+            Console.WriteLine($"Number of rooms: {lvl.GetNumRooms()}");
+
+            Console.WriteLine($"Number of enemies: {lvl.GetNumEnemies()}");
+
+            lvl.PrintEnemies();
+
+            // Este programa mostra o seguinte no ecrã:
+            //
+            // Toughness: Nightmare
+            // Number of rooms: 125
+            // Number of enemies: 6
+            // Zeroth room: Urdnot Wrex
+            // Thirteenth room: Tali'Zorah
+            // Forty-First room: Liara T'Soni
+            // Fifty-Ninth room: Garrus Vakarian
+            // Ninety-Ninth room: Joker
+            // Hundred and Twentieth room: Commander Shepard
         }
     }
 }
