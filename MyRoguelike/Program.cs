@@ -4,7 +4,7 @@ namespace MyRoguelike
 {
     public class Program
     {
-         private static void Main()
+        private static void Main()
         {
             Level lvl = new Level(125, Toughness.Nightmare);
 
