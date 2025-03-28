@@ -17,6 +17,10 @@ namespace MyGame
             }
             for (int i = 0; i < nEnemy; i++)
             {
+                if (enemies[i].GetName().Length > 8)
+                {
+                    enemies[i] = new Enemy(enemies[i].GetName().Substring(0, 8));
+                }
                 Console.WriteLine($"{enemies[i].GetName()} {enemies[i].GetHealth()} {enemies[i].GetShield()}");
                 enemies[i].PickupPowerUp(PowerUp.Health, 20);
                 enemies[i].PickupPowerUp(PowerUp.Shield, 20);
